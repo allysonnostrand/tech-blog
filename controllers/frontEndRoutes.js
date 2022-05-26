@@ -40,9 +40,17 @@ const { User, Post, Comment } = require('../models');
     })
   });
 
-  //edit post
-  router.get("/editpost/:id", async (req,res) => {
-    
-  })
+  //dashboard
+  router.get("/dashboard/:id", async (req,res) => {
+    const hbpost = await Post.findByPk(req.params.id, {})
+    console.log(hbpost)
+    const logged_in= req.session.user?true:false
+    res.render("editPost", {
+      logged_in,
+      user:hbpost,
+      posts:hbpost.posts,
+      username:req.session.user?.username
+    })
+  });
 
   module.exports = router;

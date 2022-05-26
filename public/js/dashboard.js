@@ -18,3 +18,24 @@ document.querySelector("#post").addEventListener("submit", e => {
         }
     })
 })
+
+// document.querySelector("#update").addEventListener("submit", e => {
+//     e.preventDefault();
+//     const postObj = {
+//         title:document.querySelector("#title").value,
+//         text:document.querySelector("#text").value,
+//     }
+//     fetch("/api/posts/:id", {
+//         method:"PUT",
+//         body:JSON.stringify(postObj),
+//         headers: {
+//             "Content-Type":"application/json"
+//         }
+//     }).then (res => {
+//         if(res.ok){
+//             location.reload()
+//         } else {
+//             alert("wooo")
+//         }
+//     })
+// })
