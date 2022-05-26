@@ -5,15 +5,16 @@
 </form>
 
 {{#each posts as |post|}}
+<a href="">
 <div>
     <div>
         <h2>{{title}}</h2>
-        <h3>Post by {{user.username}}</h3>
     </div>
     <div>
         <p>{{text}}</p>
     </div>
 </div>
+</a>
 {{/each}}
 
 <script src="/js/dashboard.js"></script>

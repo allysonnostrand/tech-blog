@@ -26,16 +26,23 @@ const { User, Post, Comment } = require('../models');
   //dashboard
   router.get("/dashboard", async (req,res) => {
     const hbpost = await User.findByPk(req.session.user.id, {
-      include:[Post, Comment]
+      include:[Post]
     })
     console.log(hbpost)
+    const hbsdata = hbpost.get({plain:true})
+    console.log(hbsdata)
     const logged_in= req.session.user?true:false
     res.render("dashboard", {
       logged_in,
-      user:hbpost,
-      posts:hbpost,
+      user:hbsdata,
+      posts:hbsdata.posts,
       username:req.session.user?.username
     })
   });
+
+  //edit post
+  router.get("/editpost/:id", async (req,res) => {
+    
+  })
 
   module.exports = router;
