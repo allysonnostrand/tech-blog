@@ -17,6 +17,12 @@ router.get("/", (req, res) => {
     });
 });
 
+//logout
+router.get("/logout",(req,res)=>{
+  req.session.destroy();
+  res.redirect("/")
+})
+
 //find one
 router.get("/:id", (req, res) => {
   User.findByPk(req.params.id,{
@@ -72,10 +78,5 @@ router.post("/login", (req, res) => {
     });
 });
 
-//logout
-router.get("/logout",(req,res)=>{
-  req.session.destroy();
-  res.json({msg:"logged out!"});
-})
 
 module.exports = router;

@@ -32,12 +32,11 @@ router.get("/:id", (req, res) => {
 
 //create new post
 router.post("/", (req, res) => {
-  Post.create(req.body)
-    .then(newPost => {
-      req.body.post = {
-        title:newPost.title,
-        text:newPost.text
-      }
+  Post.create({
+        title:req.body.title,
+        text:req.body.text,
+        user_id:req.session.user.id
+  }).then(newPost => {
       res.json(newPost);
     })
     .catch(err => {

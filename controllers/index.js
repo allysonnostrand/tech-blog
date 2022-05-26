@@ -13,4 +13,8 @@ router.use("/api/comments",commentRoutes)
 const frontEndRoutes = require("./frontEndRoutes");
 router.use("/", frontEndRoutes)
 
+router.get("/showsessions",(req,res)=>{
+    res.json(req.session)
+})
+
 module.exports = router;

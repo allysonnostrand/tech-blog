@@ -1,0 +1,19 @@
+<form action="" id="post">
+    <input type="text" placeholder="title" id="title">
+    <input type="text" placeholder="text" id="text">
+    <button>Create New Post</button>
+</form>
+
+{{#each posts as |post|}}
+<div>
+    <div>
+        <h2>{{title}}</h2>
+        <h3>Post by {{user.username}}</h3>
+    </div>
+    <div>
+        <p>{{text}}</p>
+    </div>
+</div>
+{{/each}}
+
+<script src="/js/dashboard.js"></script>
