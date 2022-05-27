@@ -26,10 +26,11 @@ nav a:hover, nav a:focus {
     transition: all .5s ease;
 }
 
-#title {
+#tech {
     margin-top: 10px;
     font-size: larger; 
 }
+
 #nav {
     display: inline-flex;
     justify-content: end;

@@ -28,7 +28,8 @@ Post.init({
         allowNull: false,
         references: {
             model: 'user',
-            key: 'id'}
+            key: 'id'
+        }
     },
 
     dateCreated: {
@@ -36,8 +37,7 @@ Post.init({
         defaultValue: DataTypes.NOW,
         allowNull: false
     }
-}
-,
+},
   {
     sequelize,
     freezeTableName: true,

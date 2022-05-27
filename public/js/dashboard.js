@@ -1,4 +1,4 @@
-document.querySelector("#post").addEventListener("submit", e => {
+document.querySelector("#form").addEventListener("submit", e => {
     e.preventDefault();
     const postObj = {
         title:document.querySelector("#title").value,
@@ -12,7 +12,7 @@ document.querySelector("#post").addEventListener("submit", e => {
         }
     }).then (res => {
         if(res.ok){
-            location.reload()
+            location.href = "/dashboard"
         } else {
             alert("wooo")
         }
