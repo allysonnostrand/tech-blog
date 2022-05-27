@@ -65,7 +65,7 @@ const { User, Post, Comment } = require('../models');
     res.render("editPost", {
       logged_in,
       user:hbpost,
-      post:hbpost.dataValues,
+      post:hbpost,
       username:req.session.user?.username
     })
   });
