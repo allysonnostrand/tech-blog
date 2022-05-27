@@ -1,0 +1,82 @@
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+header {
+    background-color: rgb(196, 198, 231);
+    text-decoration: none;
+    border-bottom: 6px double rgb(40, 2, 72);
+    color: black;
+    
+}
+
+nav {
+    display: flex;
+    justify-content:space-between;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav a:hover, nav a:focus {
+    outline: none;
+    text-shadow: 4px 4px 5px rgb(216, 255, 177), 1px 1px 2.5px pink;
+    transition: all .5s ease;
+}
+
+#title {
+    margin-top: 10px;
+    font-size: larger; 
+}
+#nav {
+    display: inline-flex;
+    justify-content: end;
+}
+
+main {
+    align-items: center;
+}
+
+body {
+    background-color: rgb(253, 244, 237);
+}
+
+.postcard {
+    color: rgb(7, 11, 8);
+    background-color: rgb(221, 232, 185);
+    justify-content: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: 5px;
+    border-radius: 1px;
+    border-style: groove;
+    border-color: rgb(73, 109, 70);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+#info {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.bottom {
+    margin-left: 15px;
+}
+
+footer {
+    background-color:rgb(25, 37, 23);
+    min-height: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }

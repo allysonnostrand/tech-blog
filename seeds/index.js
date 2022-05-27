@@ -17,7 +17,7 @@ const user = [{
 const post = [{
     title: "this is a test",
     text: "this is a test text for the test",
-    user_id: "1"
+    user_id: "1",
 },
 {
     title: "this is another test",

@@ -28,10 +28,16 @@ Post.init({
         allowNull: false,
         references: {
             model: 'user',
-            key: 'id'
+            key: 'id'}
+    },
+
+    dateCreated: {
+        type:DataTypes.DATEONLY,
+        defaultValue: DataTypes.NOW,
+        allowNull: false
     }
 }
-    },
+,
   {
     sequelize,
     freezeTableName: true,

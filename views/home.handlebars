@@ -1,12 +1,12 @@
 
 {{#each posts as |post|}}
-    <a href="/post/{{id}}">
-        <div>
-            <div>
+    <a href="/post/{{id}}" id="post">
+        <div class="postcard">
+            <div class="top">
                 <h2>{{title}}</h2>
-                <h3>post by {{user.username}} on {{createdAt}}</h3>
+                <h4 id="info">post by {{user.username}} on {{dateCreated}}</h4>
             </div>
-            <div>
+            <div class="bottom">
                 <p>{{text}}</p>
             </div>
         </div>
