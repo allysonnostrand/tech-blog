@@ -2,11 +2,10 @@ document.querySelector("#update").addEventListener("submit", e => {
     e.preventDefault();
     const id = parseInt(window.location.pathname.split('/')[2])
     const userObj = {
-        title:document.querySelector("#title").value,
-        text:document.querySelector("#text").value
+        text:document.querySelector("#text").value 
     }
-    fetch(`/api/posts/${id}`, {
-        method:"PUT",
+    fetch(`/api/comments/${id}`, {
+        method:"POST",
         body:JSON.stringify(userObj),
         headers: {
             "Content-Type":"application/json"
@@ -19,4 +18,3 @@ document.querySelector("#update").addEventListener("submit", e => {
         }
     })
 })
-

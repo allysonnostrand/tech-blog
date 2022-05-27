@@ -31,16 +31,15 @@ router.get("/:id", (req, res) => {
 });
 
 //create new comment
-router.post("/", (req, res) => {
- Comment.create(req.body)
-    .then(newComment => {
-      req.body.comment = {
-        title:newComment.title,
-        text:newComment.text
-      }
+router.post("/:id", (req, res) => {
+ Comment.create({
+        title:req.body.title,
+        text:req.body.text,
+        user_id:req.session.user.id,
+        post_id:req.params.id
+    }).then (newComment => {
       res.json(newComment);
-    })
-    .catch(err => {
+    }).catch(err => {
       console.log(err);
       res.status(500).json({ msg: "an error occured", err });
     });

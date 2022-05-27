@@ -46,12 +46,12 @@ const { User, Post, Comment } = require('../models');
       include:[Comment]
     })
     const mhbpost = hbpost.get({plain:true})
-    console.log(mhbpost.comments)
+    console.log(mhbpost)
     const logged_in= req.session.user?true:false
     res.render("Post", {
       logged_in,
       user:mhbpost,
-      post:mhbpost.dataValues,
+      post:mhbpost,
       comments:mhbpost.comments,
       username:req.session.user?.username
     })
