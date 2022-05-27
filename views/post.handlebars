@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <h2>{{post.title}}</h2>
+        <p>{{post.text}}</p>
+    </div>
+    <div>
+        {{#each comments as |comment|}}
+        <h3>{{user_id}} on {{createdAt}}</h3>
+        <h4>{{text}}</h4>
+        {{/each}}
+    </div>
+    <div>
+    <h2>Comment?</h2>
+    <form action="" id="update">
+        <input type="text" placeholder="text" id="text">
+        <button>Create</button>
+    </form>
+    </div>
+</div>

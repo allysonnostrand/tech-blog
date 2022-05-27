@@ -7,7 +7,7 @@ const { User, Post, Comment } = require('../models');
     const hbpost = await Post.findAll({
       include:[User, Comment]
     })
-    const mhbpost = hbpost.map(user=>user.get({plain:true}))
+    const mhbpost = hbpost.map(post=>post.get({plain:true}))
     console.log(mhbpost)
     const logged_in= req.session.user?true:false
     res.render("home",{
@@ -40,7 +40,24 @@ const { User, Post, Comment } = require('../models');
     })
   });
 
-  //dashboard
+  //view post and its comments
+  router.get("/post/:id", async (req,res) => {
+    const hbpost = await Post.findByPk(req.params.id, {
+      include:[Comment]
+    })
+    const mhbpost = hbpost.get({plain:true})
+    console.log(mhbpost.comments)
+    const logged_in= req.session.user?true:false
+    res.render("Post", {
+      logged_in,
+      user:mhbpost,
+      post:mhbpost.dataValues,
+      comments:mhbpost.comments,
+      username:req.session.user?.username
+    })
+  });
+
+  //edit or delete post
   router.get("/dashboard/:id", async (req,res) => {
     const hbpost = await Post.findByPk(req.params.id, {})
     console.log(hbpost)
@@ -48,7 +65,7 @@ const { User, Post, Comment } = require('../models');
     res.render("editPost", {
       logged_in,
       user:hbpost,
-      posts:hbpost.posts,
+      post:hbpost.dataValues,
       username:req.session.user?.username
     })
   });
