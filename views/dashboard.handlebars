@@ -5,16 +5,18 @@
 </form>
 
 {{#each posts as |post|}}
-<a href="/dashboard/{{id}}">
-<div>
-    <div>
-        <h2>{{title}}</h2>
-    </div>
-    <div>
-        <p>{{text}}</p>
-    </div>
-</div>
-</a>
+    <a href="/post/{{id}}" id="post">
+        <div class="postcard">
+            <div class="top">
+                <h2>{{title}}</h2>
+                <h4 id="info">post by {{user.username}} on {{dateCreated}}</h4>
+            </div>
+            <div class="bottom">
+                <p>{{text}}</p>
+            </div>
+        </div>
+    </a>
 {{/each}}
+
 
 <script src="/js/dashboard.js"></script>

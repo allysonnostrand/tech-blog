@@ -43,7 +43,7 @@ const { User, Post, Comment } = require('../models');
   //view post and its comments
   router.get("/post/:id", async (req,res) => {
     const hbpost = await Post.findByPk(req.params.id, {
-      include:[Comment]
+      include:[Comment, User]
     })
     const mhbpost = hbpost.get({plain:true})
     console.log(mhbpost)
