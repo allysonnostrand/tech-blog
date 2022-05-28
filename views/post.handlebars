@@ -9,12 +9,20 @@
             <p>{{post.text}}</p>
         </div>
     </div>
-    <div>
-        {{#each comments as |comment|}}
-        <h3>{{user_id}} on {{date}}</h3>
-        <h4>{{text}}</h4>
-        {{/each}}
+    
+    <br>
+    {{#each comments as |comment|}}
+    <div class="postcard">
+        <div class="top">
+        <h3>{{user_id}} on {{dateCreated}}</h3>
+        </div>
+        <div class="bottom">
+        <p>{{text}}</p>
+        </div>
     </div>
+    <br>
+     {{/each}}
+
     <br>
     <div class="combox">
         <h3>Comment?</h3>

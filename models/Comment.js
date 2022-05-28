@@ -34,6 +34,12 @@ Comment.init({
             model: 'post',
             key: 'id'
         }
+  },
+
+    dateCreated: {
+        type:DataTypes.DATEONLY,
+        defaultValue: DataTypes.NOW,
+        allowNull: false
   }
 },
   {
