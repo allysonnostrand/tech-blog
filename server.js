@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const sess = {
-  secret: process.env.SESSION_SECRET,
+  secret: 'I LIKE TURTLES',
   cookie: {
     maxAge: 2 * 60 * 60 * 1000
   },
