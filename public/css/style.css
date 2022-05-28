@@ -94,3 +94,36 @@ footer {
     border-style: groove;
     border-color: rgb(73, 109, 70);
 }
+
+.newP {
+    background-color: rgb(250, 237, 202);
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    margin: 20px;
+    height: 50px;
+    border: solid rgb(70, 99, 101);
+    border-radius: 10px;
+}
+
+.box {
+    background-color: rgb(250, 237, 202);
+    text-align: center;
+    align-items: center; 
+    margin: 20px; 
+    border-radius: 1px;
+    border-style: groove;
+    border-color: rgb(73, 109, 70);
+    padding-bottom: 25px;
+}
+
+.btn {
+    background-color: rgb(241, 84, 84);
+    height: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}

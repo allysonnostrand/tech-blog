@@ -1,11 +1,12 @@
-<form action="" id="form">
-    <input type="text" placeholder="title" id="title">
+<br><br>
+<form action="" id="form" class="newP">
+    <input type="text" placeholder="title" id="title" >
     <input type="text" placeholder="text" id="text">
     <button>Create New Post</button>
 </form>
 
 {{#each posts as |post|}}
-    <a href="/post/{{id}}" id="post">
+    <a href="/dashboard/{{id}}" id="post">
         <div class="postcard">
             <div class="top">
                 <h2>{{title}}</h2>

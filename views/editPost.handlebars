@@ -1,15 +1,28 @@
+<br><br>
 <div>
-    <div>
-        <h2>{{post.dataValues.title}}</h2>
-        <p>{{post.dataValues.text}}</p>
+     <div class="postcard">
+            <div class="top">
+                <h2>{{post.dataValues.title}}</h2>
+                <h4 id="info">post by {{username}} on {{post.dataValues.dateCreated}}</h4>
+            </div>
+            <div class="bottom">
+                <p>{{post.dataValues.text}}</p>
+            </div>
+        </div>
+    <div class="center">
+        <br>
+    <button id="delete" class="btn">Delete Post</button>
     </div>
-    <button id="delete">Delete Post</button>
+    <div class="box">
     <h2>Update?</h2>
     <form action="" id="update">
         <input type="text" placeholder="title" id="title">
         <input type="text" placeholder="text" id="text">
         <button id="delete">Update Post</button>
     </form>
+    </div>
 </div>
 
 <script src="/js/editPost.js"></script>
+
+       
